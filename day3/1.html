@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+</head>
+<body>
+    <div id="app-1">
+        <ol>
+            <todo-item v-bind:todo="todo">
+            </todo-item>
+        </ol>
+    </div>
+
+    <script type="text/javascript" src="../public/vue.js"></script>
+    <script type="text/javascript">
+        Vue.component('todo-item',{
+            props:['todo'],
+            template:'<li>{{todo.text}}</li>'
+        });
+
+        new Vue({
+            el:'#app-1',
+            data: {
+                todo: {
+                    text:'teststtt'
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>
