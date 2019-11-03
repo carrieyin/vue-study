@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../public/vue.js"></script>
+</head>
+<body>
+<div id="demo">
+    <input v-model="first" />
+    <input type="text" v-model="second">
+    <div>{{ fullname }}</div>
+</div>
+<script>
+    var vue = new Vue({
+        el:'#demo',
+        data:{
+            first:'ccc',
+            second:'ttt',
+            //fullname:'aaa ccc'
+        },
+        
+        // watch:{
+        //     first: function (val) {
+        //         this.fullname = val + ' ' + this.second ;
+        //     },
+        //     second: function (val) {
+        //         this.fullname = this.first + ' ' + val;
+        //     }
+        // }
+        computed:{
+            fullname: function () {
+                return this.first + ' ' + this.second;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

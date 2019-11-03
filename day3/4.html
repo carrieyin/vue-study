@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <button v-on:[eventname]="dosomething" >focus</button>
+    <form v-on:submit.prevent="onSubmit">form</form>
+
+</div>
+
+<script src="../public/vue.js"></script>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            isButtonDisabled: 'false',
+            eventname:'focus'
+
+        },
+
+        methods:{
+            dosomething: function () {
+                console.log("focus do some");
+            }
+        }
+    })
+
+    vue.dosomething();
+
+</script>
+</body>
+</html>

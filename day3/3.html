@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../public/vue.js"></script>
+<script>
+    var data ={a:2}
+    var obj = {} ;
+    obj.data = data ;
+    obj.created = function(){
+        console.log('a is : ' + this.a )
+    }
+    obj.created() ;
+
+    //
+    var vm = new Vue(obj) ;
+
+    new Vue({
+            data:{test: '333'},
+            created: function () {
+                console.log(this.test);
+            }
+        })
+
+
+
+    //
+    // new Vue({
+    //     data: {
+    //         a: 1
+    //     },
+    //     created: function () {
+    //         // `this` 指向 vm 实例
+    //         console.log('a is: ' + this.a)
+    //     }
+    // })
+
+
+
+
+
+</script>
+</body>
+</html>
