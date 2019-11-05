@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../public/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <input type="text" v-model="awe">
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            awe:'true'
+        },
+        computed: {
+            awesome:function () {
+                if(this.awe=='true') {
+                    return true
+                }else{
+                    return false
+                }
+            }
+        }
+    })
+    
+</script>
+</body>
+</html>
