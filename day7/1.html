@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="example-5">
+    <select multiple v-model ="group1.score">
+        <option disabled value="">请选择</option>
+        <option value="AA">A</option>
+        <option value="BB">B</option>
+        <option value="CC">C</option>
+    </select>
+
+    <input type="text" v-model="group1.score">
+    <br/>
+    <span>Selected: {{ group1.score }}</span>
+</div>
+<script type="text/javascript" src="../public/vue.js"></script>
+<script type="text/javascript">
+
+    var formDate = {
+        group1:{
+            score:  ["AA","CC"],
+        }
+    } ;
+
+    new Vue({
+        el:"#example-5",
+        data: formDate
+    })
+
+
+</script>
+</body>
+</html>

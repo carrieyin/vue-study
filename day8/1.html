@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="example">
+    <input1></input1>
+</div>
+
+<script type="text/javascript" src="../public/vue.js"></script>
+<script type="text/javascript">
+    Vue.component("input1",{
+        data: function () {
+            return {
+                va: 'test'
+            }
+        },
+        template:"<input type='text' v-bind:value='va'/>"
+    })
+
+    new Vue({
+        el:"#example",
+        data: {
+            va:'test1'
+        }
+    })
+
+
+</script>
+</body>
+</html>
