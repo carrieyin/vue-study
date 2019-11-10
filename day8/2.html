@@ -6,21 +6,17 @@
 </head>
 <body>
 <div id="example">
-    <input1></input1>
+    <input1 v-bind:value='va'></input1>
 </div>
 
 <script type="text/javascript" src="../public/vue.js"></script>
 <script type="text/javascript">
     Vue.component("input1",{
-        data: function () {
-            return {
-                va: 'test'
-            }
-        },
+        props: ['va'],
         template:"<input type='text' />"
     })
 
-    new Vue({
+    new Vue ({
         el:"#example",
         data: {
             va:'test1'
